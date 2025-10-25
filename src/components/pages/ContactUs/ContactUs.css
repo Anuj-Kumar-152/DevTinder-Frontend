@@ -1,0 +1,107 @@
+.contact-container {
+  height: 100vh;
+  background: linear-gradient(180deg, #1a2e5a, #233b6e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-box {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+  padding: 40px 50px;
+  max-width: 600px;
+  width: 100%;
+  color: #fff;
+}
+
+.contact-box h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.contact-desc {
+  text-align: center;
+  font-size: 16px;
+  color: #cfcfcf;
+  margin-bottom: 25px;
+}
+
+.success-msg {
+  background-color: #22c55e;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #e0e0e0;
+}
+
+input,
+textarea {
+  background: #ffffff;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 15px;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 2px #3b82f6;
+}
+
+.contact-btn {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-box {
+    padding: 25px 20px;
+  }
+
+  .contact-box h1 {
+    font-size: 26px;
+  }
+
+  .contact-desc {
+    font-size: 14px;
+  }
+}
+
+

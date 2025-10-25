@@ -1,0 +1,138 @@
+/* .connections-container{ 
+    margin: 1%; 
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.connections-container h1{ 
+    margin: 2% 1%;
+    display: flex;
+    justify-content: center;
+     
+}
+.conn-card{
+    display: flex;
+}
+.user-info{
+    display: flex;
+    flex-direction: column;
+}
+.connection-card{
+    margin: 16px; 
+    padding: 16px;
+    border: 1px solid black;
+    width: 20%;
+    border-radius: 10px;
+    text-align: center;
+     
+     
+}
+.connection-card img{
+    border-radius: 50%;
+    width: 100px;
+    object-fit: cover;
+} */
+
+.connections-container { 
+    margin: 1% auto;
+    width: 95%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    padding-bottom: 50px;
+}
+
+.connections-container h1 { 
+    margin: 15px 0 30px 0;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 35px;
+}
+
+.conn-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    
+}
+
+.user-info {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.connection-card {
+    color: white;
+    border-radius: 16px;
+    
+    padding: 15px;
+    width: 200px;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+    background: linear-gradient(180deg, #1a2e5a, #233b6e);
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7,
+              1px 1px 20px hsla(272, 70%, 33%, 0.969);
+     
+}
+.connection-card .about {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.connection-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.connection-card img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border: 3px solid #007bff;
+}
+
+.connection-card h2 {
+    font-size: 1.25rem;
+     
+    margin-bottom: 6px;
+}
+
+.connection-card p {
+    margin: 4px 0;
+    
+    font-size: 0.95rem;
+}
+
+.chat-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-top: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.chat-btn:hover {
+    background-color: #0056b3;
+}
+
+

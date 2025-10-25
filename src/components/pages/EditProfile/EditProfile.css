@@ -1,0 +1,153 @@
+ 
+.profile {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;  
+  align-items: center;  
+  color: white;
+  overflow-y: auto;   
+  
+  gap: 40px;
+}
+
+.profile-form {
+  background: rgba(222, 125, 103, 0.75);
+  padding: 30px 50px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(180deg, #1a2e5a, #233b6e); 
+  transition: background 0.5s, transform 0.5s; 
+  box-shadow: 1px 1px 20px #012290f7,
+              1px 1px 20px hsla(246, 74%, 42%, 0.969);
+   
+}
+.profile-form:hover{
+  transform: translateY(-5px);
+}
+
+.profile-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  margin-top: 0px;
+}
+
+.profile-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.profile-form label {
+  font-size: 16px; 
+}
+
+.profile-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+  margin-bottom: 7px;
+}
+
+.profile-form input:focus {
+  border: 2px solid #00bcd4;
+  background-color: #222;
+  color: white;
+}
+
+.profile-form button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.profile-form button:hover {
+  background-color: #14cee2;
+}
+.card-toast{
+  display: flex;
+  flex-direction: column; 
+}
+/* ✅ Toast styles (not fixed) */
+.toast-container {
+  margin-top: 16% ;
+  margin-left: 15%; 
+   
+}
+
+.toast {
+  display: flex;
+  animation: fadeInOut 5s ease forwards;
+}
+
+.alert {
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.alert-success {
+  background-color: #10b981; /* green */
+}
+
+/* ✅ fade-in, then fade-out animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+
+
+@media (max-width: 500px) {
+  .profile {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;  
+  align-items: center;  
+  color: white;
+  overflow-y: auto;    
+  gap: 0px;
+  
+}
+.profile-form { 
+  padding: 25px 35px; 
+  max-width: 320px;
+    
+}
+.card-toast{
+  display: flex;
+  flex-direction: column-reverse; 
+}
+.toast-container {
+  margin-bottom: 8% ;
+  margin-top: -5%;  
+}
+}

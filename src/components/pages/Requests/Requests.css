@@ -1,0 +1,96 @@
+.requests-container{ 
+     
+    margin: 1% auto;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    padding-bottom: 50px;
+}
+.requests-container h1{ 
+    margin: 15px 0 30px 0;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 40px;
+}
+.req-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    color: white;
+     
+}
+.request-card{
+    transition: background 0.5s, transform 0.5s; 
+    box-shadow: 1px 1px 20px #012290f7,
+              1px 1px 20px hsla(246, 74%, 42%, 0.969);
+    margin: 16px; 
+     
+    border: 1px solid black;
+    width: 300px;
+    
+    border-radius: 10px;
+    text-align: center;
+}
+.request-card img{
+    height: 35vh;
+    width: 100%; 
+    object-fit: cover;
+}
+.request-card .abt{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.request-card h2{ 
+    padding: 7px;
+     
+}
+ 
+.request-card p{  
+    padding: 3px 15px 8px;
+
+}
+
+
+.card-action {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.buy-button {
+  background-color: #2563eb; /* same as btn-primary */
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.Primary{
+    background-color: palevioletred;
+}
+.buy-button:hover {
+  background-color: #1d4ed8;
+}
+.Primary:hover {
+  background-color: rgb(222, 53, 109);
+}
+
+
+
+@media (max-width: 500px){
+    
+}
