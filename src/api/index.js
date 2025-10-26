@@ -3,6 +3,9 @@ import axios from "axios";
 const axiosInstance = axios.create({
   baseURL: import.meta.env.VITE_BASE_URL,
   withCredentials: true,
+  headers:{
+    Authorization:`Bearer ${window.localStorage.getItem("token")}`
+  }
 });
 
 // Add interceptor to include the latest token dynamically
