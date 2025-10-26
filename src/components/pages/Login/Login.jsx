@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import "./Login.css";
-import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../../utils/userSlice';
 import { useNavigate } from 'react-router-dom';
-import { BASE_URL } from '../../utils/constants';
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { axiosInstance } from '../../../api';

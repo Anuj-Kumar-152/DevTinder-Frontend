@@ -3,8 +3,6 @@ import "./Chat.css";
 import { useEffect, useRef, useState } from 'react';
 import { createSocketConnection } from '../../utils/socket';
 import { useSelector } from 'react-redux';
-import axios from 'axios';
-import { BASE_URL } from '../../utils/constants';
 import { axiosInstance } from '../../../api';
 
 const Chat = () => {

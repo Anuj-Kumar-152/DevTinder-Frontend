@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 import "./EditProfile.css";
 import Card from '../Card/Card';
-import axios from 'axios';
-import { BASE_URL } from '../../utils/constants';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../../utils/userSlice';
 import { axiosInstance } from '../../../api';

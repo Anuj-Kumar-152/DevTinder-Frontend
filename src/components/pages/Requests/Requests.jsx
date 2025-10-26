@@ -1,6 +1,5 @@
-import axios from "axios";
+
 import "./Requests.css";
-import { BASE_URL } from "../../utils/constants";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addRequests, removeRequest } from "../../utils/requestSlice";
@@ -29,7 +28,7 @@ const Requests = () => {
 
         try{
             const res = await axiosInstance.get(
-                BASE_URL+"/user/requests/received",
+                "/user/requests/received",
                 {withCredentials: true},
             )
             

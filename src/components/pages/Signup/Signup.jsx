@@ -3,8 +3,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Signup.css';
-import axios from 'axios';
-import { BASE_URL } from '../../utils/constants';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../../utils/userSlice';
 import { ToastContainer, toast } from 'react-toastify';

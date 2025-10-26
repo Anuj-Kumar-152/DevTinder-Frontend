@@ -3,8 +3,6 @@ import "./Home.css"
 import Navbar from '../Navbar/Navbar';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import Footer from '../Footer/Footer';
-import axios from 'axios';
-import { BASE_URL } from '../../utils/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser } from '../../utils/userSlice';
 import { axiosInstance } from '../../../api';

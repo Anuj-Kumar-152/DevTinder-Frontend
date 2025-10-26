@@ -1,6 +1,6 @@
 import "./Connections.css";
-import {BASE_URL} from "../../utils/constants";
-import axios from "axios";
+
+
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addConnections } from "../../utils/connectionSlice";
@@ -16,7 +16,7 @@ const Connections = () => {
 
         try{
             const res = await axiosInstance.get(
-                BASE_URL+"/user/connections", 
+               "/user/connections", 
                 {withCredentials: true},
             )
             

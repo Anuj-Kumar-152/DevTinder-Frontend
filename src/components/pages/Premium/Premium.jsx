@@ -1,6 +1,5 @@
-import axios from "axios";
+
 import "./Premium.css";
-import { BASE_URL } from '../../utils/constants';
 import { useNavigate } from "react-router-dom";
 import { axiosInstance } from "../../../api";
 

@@ -2,8 +2,7 @@ import { useState } from "react";
 import "./Navbar.css";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
-import { BASE_URL } from "../../utils/constants";
+
 import { axiosInstance } from "../../../api";
 
 function Navbar() {
