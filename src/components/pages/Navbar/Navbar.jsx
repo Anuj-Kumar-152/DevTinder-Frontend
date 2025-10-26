@@ -22,6 +22,7 @@ function Navbar() {
                 { withCredentials: true }
             );
             setToggle(false);
+            window.localStorage.setItem("token","")
             navigate("/login");
         } catch (err) {
             console.error(err);
