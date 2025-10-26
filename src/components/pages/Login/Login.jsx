@@ -23,6 +23,7 @@ const Login = () => {
                 emailId,
                 password,
             }, { withCredentials: true });
+            console.log(res.data)
             window.localStorage.setItem("token",res.data?.token)
             dispatch(addUser(res.data));
 
