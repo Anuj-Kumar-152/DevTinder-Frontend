@@ -2,6 +2,7 @@ import axios from "axios";
 import "./Premium.css";
 import { BASE_URL } from '../../utils/constants';
 import { useNavigate } from "react-router-dom";
+import { axiosInstance } from "../../../api";
 
 
 const Premium = () => {
@@ -12,7 +13,7 @@ const Premium = () => {
         
 
         try {
-            const order = await axios.post(BASE_URL + "/payment/create",
+            const order = await axiosInstance.post( "/payment/create",
                 {
                     membershipType: type,
                 },

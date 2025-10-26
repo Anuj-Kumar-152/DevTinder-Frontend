@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { BASE_URL } from '../../utils/constants';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { axiosInstance } from '../../../api';
 
 const Login = () => {
 
@@ -19,11 +20,11 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const res = await axios.post(BASE_URL + "/login", {
+            const res = await axiosInstance.post("/login", {
                 emailId,
                 password,
             }, { withCredentials: true });
-
+            window.localStorage.setItem("token",res.data?.token)
             dispatch(addUser(res.data));
 
             toast.success("Welcome to DevTinder 👋", {

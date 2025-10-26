@@ -5,6 +5,7 @@ import { createSocketConnection } from '../../utils/socket';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 import { BASE_URL } from '../../utils/constants';
+import { axiosInstance } from '../../../api';
 
 const Chat = () => {
     const user = useSelector(store => store.user);
@@ -23,7 +24,7 @@ const Chat = () => {
     useEffect(() => {
         const fetchMessages = async () => {
             try {
-                const res = await axios.get(`${BASE_URL}/chat/${targetUserId}`, { withCredentials: true });
+                const res = await axiosInstance.get(`/chat/${targetUserId}`, { withCredentials: true });
                 const chatMessages = res.data.messages.map(msg => {
                     const sender = typeof msg.senderId === "object" ? msg.senderId : { _id: msg.senderId };
                     return {

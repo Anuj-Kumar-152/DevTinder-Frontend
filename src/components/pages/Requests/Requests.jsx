@@ -4,6 +4,7 @@ import { BASE_URL } from "../../utils/constants";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addRequests, removeRequest } from "../../utils/requestSlice";
+import { axiosInstance } from "../../../api";
 
 const Requests = () => {
 
@@ -12,8 +13,8 @@ const Requests = () => {
 
     const reviewRequest = async (status, _id) => {
         try{
-            await axios.post(
-                BASE_URL+"/request/review/"+status+"/"+_id,
+            await axiosInstance.post(
+                "/request/review/"+status+"/"+_id,
                 {},
                 {withCredentials: true},
             );
@@ -27,7 +28,7 @@ const Requests = () => {
     const fetchRequests = async () => {
 
         try{
-            const res = await axios.get(
+            const res = await axiosInstance.get(
                 BASE_URL+"/user/requests/received",
                 {withCredentials: true},
             )

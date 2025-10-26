@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { BASE_URL } from '../../utils/constants';
 import { addFeed } from '../../utils/feedSlice';
 import Card from '../Card/Card';
+import { axiosInstance } from '../../../api';
 
 const Feed = () => {
   const feed = useSelector((store) => store.feed);
@@ -12,7 +13,7 @@ const Feed = () => {
   const getFeed = async () => {
     if(feed && feed.length > 0) return; // already loaded
     try {
-      const res = await axios.get(BASE_URL + "/feed", {withCredentials: true});
+      const res = await axiosInstance.get("/feed", {withCredentials: true});
       dispatch(addFeed(res.data)); // make sure res.data is array
     } catch (err) {
       console.error(err);

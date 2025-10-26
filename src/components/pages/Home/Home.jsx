@@ -7,6 +7,7 @@ import axios from 'axios';
 import { BASE_URL } from '../../utils/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser } from '../../utils/userSlice';
+import { axiosInstance } from '../../../api';
 
 const Home = () => {
 
@@ -31,7 +32,7 @@ const Home = () => {
  
 
     try {
-      const res = await axios.get(BASE_URL + "/profile/view", {
+      const res = await axiosInstance.get( "/profile/view", {
         withCredentials: true,
       })
 

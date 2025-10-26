@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux';
 import { addUser } from '../../utils/userSlice';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { axiosInstance } from '../../../api';
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -29,8 +30,8 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(
-        `${BASE_URL}/signup`,
+      const res = await axiosInstance.post(
+        `/signup`,
         {
           firstName,
           lastName,

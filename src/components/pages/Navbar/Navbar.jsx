@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BASE_URL } from "../../utils/constants";
+import { axiosInstance } from "../../../api";
 
 function Navbar() {
     const user = useSelector((store) => store.user);
@@ -16,8 +17,8 @@ function Navbar() {
 
     const handleLogout = async () => {
         try {
-            await axios.post(
-                BASE_URL + "/logout",
+            await axiosInstance.post(
+                "/logout",
                 {},
                 { withCredentials: true }
             );
