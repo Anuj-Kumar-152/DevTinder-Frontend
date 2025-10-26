@@ -44,6 +44,7 @@
   color: blue;
   margin-bottom: 12px;
   font-size: 2rem;
+  text-transform: capitalize;
 }
 
 .con-class {
@@ -93,9 +94,12 @@ button:hover {
   .payment-card {
 
     padding: 30px 35px;
-    border-radius: 18px;
-
-
-
+    border-radius: 18px; 
   }
+  .pay-head {
+  
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+   
+}
 }
